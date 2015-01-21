@@ -138,8 +138,8 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <rackspaceDistMgmtStagingUrl>http://docs-nexus.rackspace.com/nexus/content/repositories/docs-staging/</rackspaceDistMgmtStagingUrl>
-    <rackspaceDistMgmtProductionUrl>http://docs-nexus.rackspace.com/content/repositories/docs-prod/</rackspaceDistMgmtProductionUrl>
+    <rackspaceDistMgmtStagingUrl>http://docs-staging.rackspace.com/nexus/content/repositories/docs-staging/</rackspaceDistMgmtStagingUrl>
+    <rackspaceDistMgmtProductionUrl>http://docs-staging.rackspace.com/content/repositories/docs-prod/</rackspaceDistMgmtProductionUrl>
     <release.arguments />
   </properties>
 
