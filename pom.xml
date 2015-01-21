@@ -23,6 +23,12 @@
   <url>https://github.com/rackerlabs/rackspace-docs-parent</url>
   <description>The common parent for documentation projects at Rackspace.</description>
 
+  <parent>
+    <groupId>org.sonatype.oss</groupId>
+    <artifactId>oss-parent</artifactId>
+    <version>9</version>
+  </parent>
+
   <scm>
     <url>https://github.com/rackerlabs/rackspace-docs-parent/tree/master</url>
     <connection>scm:git:git://github.com/rackerlabs/rackspace-docs-parent.git</connection>
