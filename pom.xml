@@ -73,60 +73,14 @@
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-enforcer-plugin</artifactId>
-        <version>1.2</version>
-        <executions>
-          <execution>
-            <id>enforce-maven</id>
-            <goals>
-              <goal>enforce</goal>
-            </goals>
-            <configuration>
-              <rules>
-                <requireMavenVersion>
-                  <version>(,2.1.0),(2.1.0,2.2.0),(2.2.0,)</version>
-                  <message>Maven 2.1.0 and 2.2.0 produce incorrect GPG signatures and checksums respectively.</message>
-                </requireMavenVersion>
-              </rules>
-            </configuration>
-          </execution>
-        </executions>
+        <artifactId>maven-release-plugin</artifactId>
+        <!-- override the version inherited from the parent -->
+        <version>2.5.1</version>
+        <configuration>
+          <arguments>-Psonatype-oss-release ${release.arguments}</arguments>
+        </configuration>
       </plugin>
     </plugins>
-    <pluginManagement>
-      <plugins>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-release-plugin</artifactId>
-          <version>2.5.1</version>
-          <configuration>
-            <mavenExecutorId>forked-path</mavenExecutorId>
-            <useReleaseProfile>false</useReleaseProfile>
-            <arguments>${release.arguments} -Prackspace-docs-release</arguments>
-          </configuration>
-        </plugin>
-
-        <plugin>
-          <groupId>com.rackspace.cloud.api</groupId>
-          <artifactId>olink-maven-plugin</artifactId>
-          <version>1.2.6</version>
-          <executions>
-            <execution>
-              <phase>initialize</phase>
-              <goals>
-                <goal>olink</goal>
-              </goals>
-            </execution>
-          </executions>
-        </plugin>
-
-        <plugin>
-          <groupId>com.rackspace.cloud.api</groupId>
-          <artifactId>rackspace-docs-maven-plugin</artifactId>
-          <version>2.1.5</version>
-        </plugin>
-      </plugins>
-    </pluginManagement>
   </build>
 
   <properties>
@@ -160,6 +114,41 @@
       <build>
         <plugins>
         </plugins>
+
+        <pluginManagement>
+          <plugins>
+            <plugin>
+              <groupId>org.apache.maven.plugins</groupId>
+              <artifactId>maven-release-plugin</artifactId>
+              <version>2.5.1</version>
+              <configuration>
+                <mavenExecutorId>forked-path</mavenExecutorId>
+                <useReleaseProfile>false</useReleaseProfile>
+                <arguments>${release.arguments}</arguments>
+              </configuration>
+            </plugin>
+
+            <plugin>
+              <groupId>com.rackspace.cloud.api</groupId>
+              <artifactId>olink-maven-plugin</artifactId>
+              <version>1.2.6</version>
+              <executions>
+                <execution>
+                  <phase>initialize</phase>
+                  <goals>
+                    <goal>olink</goal>
+                  </goals>
+                </execution>
+              </executions>
+            </plugin>
+
+            <plugin>
+              <groupId>com.rackspace.cloud.api</groupId>
+              <artifactId>rackspace-docs-maven-plugin</artifactId>
+              <version>2.1.5</version>
+            </plugin>
+          </plugins>
+        </pluginManagement>
       </build>
     </profile>
   </profiles>
