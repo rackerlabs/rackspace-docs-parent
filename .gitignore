@@ -1,2 +1,5 @@
 # Build output
 target/
+
+# Per-user files created by IDEs
+nbactions*.xml
