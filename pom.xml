@@ -16,7 +16,7 @@
 
   <groupId>com.rackspace.cloud.api</groupId>
   <artifactId>rackspace-docs-parent</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>Rackspace API Documentation Parent</name>
@@ -33,7 +33,7 @@
     <url>https://github.com/rackerlabs/rackspace-docs-parent/tree/master</url>
     <connection>scm:git:git://github.com/rackerlabs/rackspace-docs-parent.git</connection>
     <developerConnection>scm:git:git@github.com:rackerlabs/rackspace-docs-parent.git</developerConnection>
-    <tag>rackspace-docs-parent-1.0.0</tag>
+    <tag>HEAD</tag>
   </scm>
 
   <licenses>
