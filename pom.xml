@@ -69,19 +69,6 @@
     </repository>
   </repositories>
 
-  <distributionManagement>
-    <snapshotRepository>
-      <id>rackspace-docs-staging</id>
-      <name>Rackspace Docs Staging</name>
-      <url>${rackspaceDistMgmtStagingUrl}</url>
-    </snapshotRepository>
-    <repository>
-      <id>rackspace-docs-production</id>
-      <name>Rackspace Production Repository</name>
-      <url>${rackspaceDistMgmtProductionUrl}</url>
-    </repository>
-  </distributionManagement>
-
   <build>
     <plugins>
       <plugin>
@@ -151,7 +138,25 @@
 
   <profiles>
     <profile>
-      <id>rackspace-docs-release</id>
+      <id>rackspace-docs-build</id>
+
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+
+      <distributionManagement>
+        <snapshotRepository>
+          <id>rackspace-docs-staging</id>
+          <name>Rackspace Docs Staging</name>
+          <url>${rackspaceDistMgmtStagingUrl}</url>
+        </snapshotRepository>
+        <repository>
+          <id>rackspace-docs-production</id>
+          <name>Rackspace Production Repository</name>
+          <url>${rackspaceDistMgmtProductionUrl}</url>
+        </repository>
+      </distributionManagement>
+
       <build>
         <plugins>
         </plugins>
