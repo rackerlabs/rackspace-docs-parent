@@ -168,7 +168,7 @@
             <plugin>
               <groupId>com.rackspace.cloud.api</groupId>
               <artifactId>rackspace-docs-maven-plugin</artifactId>
-              <version>2.1.6</version>
+              <version>2.1.6-SNAPSHOT</version>
             </plugin>
           </plugins>
         </pluginManagement>
