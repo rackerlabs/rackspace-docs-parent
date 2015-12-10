@@ -52,10 +52,7 @@
   </developers>
 
   <repositories>
-    <!--
-      This allows users to reference snapshots published to Sonatype (e.g.
-      snapshots of rackspace-docs-maven-plugin).
-    -->
+    <!-- This allows users to reference snapshots published to Sonatype -->
     <repository>
       <id>sonatype-nexus-snapshots</id>
       <name>Sonatype Nexus Snapshots</name>
@@ -65,6 +62,32 @@
       </releases>
       <snapshots>
         <enabled>true</enabled>
+      </snapshots>
+    </repository>
+
+    <!-- This allows users to reference Rackspace snapshots -->
+    <repository>
+      <id>maven-research-rackspace-snapshots</id>
+      <name>Rackspace Maven Snapshots</name>
+      <url>https://maven.research.ci.rackspace.net/content/repositories/snapshots</url>
+      <releases>
+        <enabled>false</enabled>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+    </repository>
+
+    <!-- This allows users to reference Rackspace releases -->
+    <repository>
+      <id>maven-research-rackspace-releases</id>
+      <name>Rackspace Maven Snapshots</name>
+      <url>https://maven.research.ci.rackspace.net/content/repositories/releases</url>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>false</enabled>
       </snapshots>
     </repository>
   </repositories>
@@ -85,8 +108,8 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <rackspaceDistMgmtStagingUrl>http://docs-staging.rackspace.com/nexus/content/repositories/docs-staging/</rackspaceDistMgmtStagingUrl>
-    <rackspaceDistMgmtProductionUrl>http://docs-staging.rackspace.com/content/repositories/docs-prod/</rackspaceDistMgmtProductionUrl>
+    <rackspaceDistMgmtStagingUrl>https://maven.research.ci.rackspace.net/content/repositories/snapshots</rackspaceDistMgmtStagingUrl>
+    <rackspaceDistMgmtProductionUrl>https://maven.research.ci.rackspace.net/content/repositories/releases</rackspaceDistMgmtProductionUrl>
     <release.arguments />
   </properties>
 
@@ -100,13 +123,13 @@
 
       <distributionManagement>
         <snapshotRepository>
-          <id>rackspace-docs-staging</id>
-          <name>Rackspace Docs Staging</name>
+          <id>rackspace-snapshots</id>
+          <name>Rackspace Snapshots</name>
           <url>${rackspaceDistMgmtStagingUrl}</url>
         </snapshotRepository>
         <repository>
-          <id>rackspace-docs-production</id>
-          <name>Rackspace Production Repository</name>
+          <id>rackspace-releases</id>
+          <name>Rackspace </name>
           <url>${rackspaceDistMgmtProductionUrl}</url>
         </repository>
       </distributionManagement>
