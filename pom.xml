@@ -90,6 +90,13 @@
     </repository>
   </repositories>
 
+  <pluginRepositories>
+      <pluginRepository>
+          <id>maven-research-rackspace-releases</id>
+          <url>https://maven.research.rackspacecloud.com/content/repositories/releases</url>
+      </pluginRepository>
+  </pluginRepositories>
+
   <build>
     <plugins>
       <plugin>
