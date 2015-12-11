@@ -52,6 +52,30 @@
   </developers>
 
   <repositories>
+    <!-- This allows users to reference Rackspace snapshots -->
+    <repository>
+      <id>maven-research-rackspace-snapshots</id>
+      <name>Rackspace Maven Snapshots</name>
+      <url>https://maven.research.rackspacecloud.com/content/repositories/snapshots</url>
+      <releases>
+        <enabled>false</enabled>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+    </repository>
+    <!-- This allows users to reference Rackspace releases -->
+    <repository>
+      <id>maven-research-rackspace-releases</id>
+      <name>Rackspace Maven Releases</name>
+      <url>https://maven.research.rackspacecloud.com/content/repositories/releases</url>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </repository>
     <!-- This allows users to reference snapshots published to Sonatype -->
     <repository>
       <id>sonatype-nexus-snapshots</id>
@@ -62,32 +86,6 @@
       </releases>
       <snapshots>
         <enabled>true</enabled>
-      </snapshots>
-    </repository>
-
-    <!-- This allows users to reference Rackspace snapshots -->
-    <repository>
-      <id>maven-research-rackspace-snapshots</id>
-      <name>Rackspace Maven Snapshots</name>
-      <url>https://maven.research.ci.rackspace.net/content/repositories/snapshots</url>
-      <releases>
-        <enabled>false</enabled>
-      </releases>
-      <snapshots>
-        <enabled>true</enabled>
-      </snapshots>
-    </repository>
-
-    <!-- This allows users to reference Rackspace releases -->
-    <repository>
-      <id>maven-research-rackspace-releases</id>
-      <name>Rackspace Maven Snapshots</name>
-      <url>https://maven.research.ci.rackspace.net/content/repositories/releases</url>
-      <releases>
-        <enabled>true</enabled>
-      </releases>
-      <snapshots>
-        <enabled>false</enabled>
       </snapshots>
     </repository>
   </repositories>
